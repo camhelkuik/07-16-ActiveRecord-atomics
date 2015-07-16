@@ -4,8 +4,8 @@ class Photo < ActiveRecord::Base
   
   validates :title, presence: true
     
-  def top_photo
-    if photo >= 3
+  def top_photo    
+    if (self.album.length >= 3)
       true
     else
       false
