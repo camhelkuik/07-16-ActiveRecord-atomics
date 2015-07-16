@@ -1,6 +1,10 @@
 require "pry"
 require "active_record"
 require "sqlite3"
+require "sinatra"
+require "sinatra/reloader"
+require 'active_support/core_ext/object/blank'
+
 
 ActiveRecord::Base.establish_connection(adapter: 'sqlite3', database: 'database.db')
 
