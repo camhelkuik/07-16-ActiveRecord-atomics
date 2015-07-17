@@ -18,5 +18,10 @@ require_relative "models/photographer.rb"
 require_relative "models/album.rb"
 require_relative "models/photo.rb"
 
+#controllers
+require_relative "controllers/add.rb"
+require_relative "controllers/delete.rb"
+require_relative "controllers/edit.rb"
+require_relative "controllers/main.rb"
+require_relative "controllers/view.rb"
 
-binding.pry
