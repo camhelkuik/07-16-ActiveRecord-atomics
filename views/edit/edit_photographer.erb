@@ -1,0 +1,16 @@
+
+  <ul>the Photographers are:
+    <% Photographers.all.each do |p| %>
+    <li> ID <%= p.id %> – <%= p.name %></li> 
+    <% end %>
+  </ul>
+  
+  <form action="save_photographer">
+    <p>Enter the photographers's id you'd like to change.</p>
+    <input type="text" name="id">
+    <p>Enter new photographer name info</p>
+    <input type="text" name="name">
+    
+    <input type="submit">
+  </form>
+

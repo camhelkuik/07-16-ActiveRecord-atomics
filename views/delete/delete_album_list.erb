@@ -1,0 +1,13 @@
+
+ <ul>The album are
+   <% Album.all.each do |a| %>
+   <li> ID <%= a.id %> – <%= a.title %></li> 
+   <% end %>
+ </ul>
+<form action="delete_album">
+  <input type="text" name="id" >
+<input type="submit">
+</form>
+
+  
+

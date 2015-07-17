@@ -1,14 +1,39 @@
   
-get "/edit" do
-    erb :"/edit_form"
+get "/edit_photo" do
+    erb :"/edit/edit_photo"
 end
 
-get "/edit_save" do
-  @entry = Products.find(params["id"].to_i)
-  @entry.general_info = params["general_info"]
-  @entry.technical_specs = params["technical_specs"]
-  @entry.where_to_buy = params["where_to_buy"]
+get "/save_photo" do
+  @entry = Photo.find(params["id"].to_i)
+  @entry.title = params["title"]
+  @entry.lighting = params["lighting"]
+  @entry.location = params["location"]
+  @entry.photographer_id = params["photographer_id"]
   @entry.save(params["id"].to_i)
-  #send shit to the db
+
+  "success"
+end
+
+get "/edit_photographer" do
+    erb :"/edit/edit_photographer"
+end
+
+get "/save_photographer" do
+  @entry = Photographer.find(params["id"].to_i)
+  @entry.name = params["name"]
+  @entry.save(params["id"].to_i)
+
+  "success"
+end
+
+get "/edit_album" do
+    erb :"/edit/edit_album"
+end
+
+get "/save_album" do
+  @entry = Album.find(params["id"].to_i)
+  @entry.title = params["title"]
+  @entry.save(params["id"].to_i)
+
   "success"
 end

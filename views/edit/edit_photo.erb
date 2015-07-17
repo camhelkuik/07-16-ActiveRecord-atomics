@@ -1,0 +1,22 @@
+
+  <ul>the Photos are:
+    <% Photo.all.each do |p| %>
+    <li> ID <%= p.id %> – <%= p.title %> – <%= p.lighting %>  – <%= p.location %>  – <%= p.photographer_id %></li> 
+    <% end %>
+  </ul>
+  
+  <form action="save_photo">
+    <p>Enter the photo's id you'd like to change.</p>
+    <input type="text" name="id">
+    <p>Enter new photo title info</p>
+    <input type="text" name="title">
+    <p>Enter new photo lighting</p>
+    <input type="text" name="lighting">
+    <p>Enter new photo location</p>
+    <input type="text" name="location"> 
+    <p>Enter new photo photographer_id</p>
+    <input type="text" name="photographer_id"> 
+    
+    <input type="submit">
+  </form>
+

@@ -1,9 +1,12 @@
 
-get "/view" do
-    erb :"/view_list"
+get "/view_photographers" do
+  erb :"view/view_photographers"
 end
 
-get "/view_individual/:x" do
-  @view = Products.find(params["x"].to_i)
-  erb :"/view_individual"
+get "/view_photo" do
+  erb :"view/view_photo"
+end
+
+get "/view_album" do
+  erb :"view/view_album"
 end

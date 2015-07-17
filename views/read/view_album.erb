@@ -1,0 +1,15 @@
+
+<h2 class= centered>Here are your Albums:</h2>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+    </tr>
+    <% Album.all.each do |a| %>
+    <tr>
+      <td><%= a.id %></td>
+      <td><%= a.title %></td>
+    </tr>
+    <% end %>
+  </table>

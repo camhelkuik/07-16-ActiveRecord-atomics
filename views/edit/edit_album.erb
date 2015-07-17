@@ -1,0 +1,14 @@
+  <ul>the Album are:
+    <% Album.all.each do |a| %>
+    <li> ID <%= a.id %> – <%= a.title %></li> 
+    <% end %>
+  </ul>
+  
+  <form action="save_album">
+    <p>Enter the album's id you'd like to change.</p>
+    <input type="text" name="id">
+    <p>Enter new album title info</p>
+    <input type="text" name="title">
+    
+    <input type="submit">
+  </form>

@@ -1,0 +1,13 @@
+
+ <ul>The photos are
+   <% Photo.all.each do |photo| %>
+   <li> ID <%= photo.id %> – <%= photo.title %> - <%= photo.lighting %> - <%= photo.location %> - <%= photo.photographer_id %></li> 
+   <% end %>
+ </ul>
+<form action="delete_photo">
+  <input type="text" name="id" >
+<input type="submit">
+</form>
+
+  
+

@@ -1,0 +1,21 @@
+
+<h2 class= centered>Here are your Photos:</h2>
+
+  <table>
+    <tr>
+      <th>ID</th>
+      <th>Title</th>
+      <th>Lighting</th>
+      <th>Location</th>
+      <th>Photographer_id</th>
+    </tr>
+    <% Photo.all.each do |p| %>
+    <tr>
+      <td><%= p.id %></td>
+      <td><%= p.title %></td>
+      <td><%= p.lighting %></td>
+      <td><%= p.location %></td>
+      <td><%= p.photographer %></td>
+    </tr>
+    <% end %>
+  </table>
