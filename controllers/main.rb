@@ -1,5 +1,5 @@
 get "/home" do
-  erb :"/homepage"
+  erb :"/main/homepage"
 end
 
 get "/add_menu" do

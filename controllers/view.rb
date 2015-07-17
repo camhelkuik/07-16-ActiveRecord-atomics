@@ -1,12 +1,12 @@
 
-get "/view_photographers" do
-  erb :"view/view_photographers"
+get "/view_photographer" do
+  erb :"read/view_photographer"
 end
 
 get "/view_photo" do
-  erb :"view/view_photo"
+  erb :"read/view_photo"
 end
 
 get "/view_album" do
-  erb :"view/view_album"
+  erb :"read/view_album"
 end
