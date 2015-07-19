@@ -11,4 +11,5 @@ class Photo < ActiveRecord::Base
       false
     end
   end
+  
 end

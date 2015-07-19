@@ -24,3 +24,18 @@ get "/save_album" do
   @new_entry = Album.create({"title" => params["title"]})
   return "Success!"
 end
+
+get "/add_photo_to_album" do
+  @album = Album.all
+  @photo = Photo.all
+  erb :"/add/add_photo_to_album"
+end
+
+get "/save_photo_to_album" do
+  @a = Album.find(params["album_id"])
+  @p = Photo.find(params["photo_id"])
+  
+  @a.photos << @p
+  
+  return "Success!"
+end

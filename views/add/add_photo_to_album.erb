@@ -1,0 +1,21 @@
+<h2>Add a photo to an album</h2>
+
+<form action="/save_photo_to_album">
+  
+  <select name="album_id">
+    <% @album.each do |a| %>
+      <option value="<%= a.id %>"><%= a.title %></option>
+    <% end %>
+  </select>
+  
+  <select name="photo_id">
+    <% @photo.each do |p| %>
+      <option value="<%= p.id %>"><%= p.title %></option>
+    <% end %>
+  </select>
+  
+  <input type= "submit"></input>
+  
+</form>
+
+<p><a href='/home'>Go to Home Page</a></p>
